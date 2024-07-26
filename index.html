@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charlotte Moche</title>
+    <link rel="icon" href="favicon.ico?" type="image/x-icon">
+    <link href="/public/styles.css" rel="stylesheet">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <div class="sticky bg-white top-0 z-50 shadow-md">
+        <nav
+            class="gap-3 flex items-center justify-between h-20 lg:h-24 relative px-4 container mx-auto 2xl:px-28 z-40">
+            <a href="/" id="plover-logo" class="min-w-fit max-w-min">
+                <img src="/logo.png" alt="Logo" class="h-14 lg:h-16" />
+            </a>
+            <div class="flex items-center justify-end z-30 shrink-0">
+                <div id="nav-menu-overlay" class="lg:hidden fixed inset-0 top-20 bg-black/50 z-10 hidden">
+                </div>
+                <div id="mobile-menu-open" class="lg:hidden p-1">
+                    <svg class="w-8 h-8 text-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+
+                </div>
+                <div id="mobile-menu-close" class="lg:hidden hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12">
+                        </path>
+                    </svg>
+                </div>
+                <div id="nav-items"
+                    class="fixed top-20 right-0 sm:right-auto w-4/5 sm:w-1/2 bg-white border-t z-50 h-full hidden lg:static lg:block lg:w-auto lg:border-none lg:bg-transparent lg:h-auto">
+                    <div
+                        class="flex flex-col items-end lg:flex-row lg:items-center pt-4 px-4 sm:px-10 lg:p-0 gap-4 lg:gap-6 text-zinc-900">
+                        <a href="#about"
+                            class="nav-link sm:hover:text-zinc-700 sm:hover:underline font-medium text-lg lg:text-base">
+                            About
+                        </a>
+                        <a href="#projects"
+                            class="nav-link sm:hover:text-zinc-700 sm:hover:underline font-medium text-lg lg:text-base">
+                            Projects
+                        </a>
+                        <a href="#contact"
+                            class="nav-link sm:hover:text-zinc-700 sm:hover:underline font-medium text-lg lg:text-base">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <section id="about" class="section opacity-0">
+        <div class="container px-7 2xl:px-28 pt-10">
+            About
+        </div>
+    </section>
+
+    <section id="projects" class="section opacity-0">
+        <div class="container px-7 2xl:px-28 pt-10">
+            Projects
+        </div>
+    </section>
+
+    <section id="contact" class="section opacity-0">
+        <div class="container px-7 2xl:px-28 pt-10">
+            Contact
+        </div>
+    </section>
+
+    <footer class="bg-black text-white py-10 lg:py-20">
+        <div class="container px-7 2xl:px-32">
+
+        </div>
+    </footer>
+</body>
+
+</html>

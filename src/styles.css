@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'DMSans';
+    font-weight: 600;
+    src: url('/public/fonts/DMSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'DMSans';
+    font-weight: 500;
+    src: url('/public/fonts/DMSans-Medium.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'DMSans';
+    font-weight: 400;
+    src: url('/public/fonts/DMSans-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'DMSans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.section {
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.section.header {
+    transform: translateY(-10rem);
+}
+
+.section.appear {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
