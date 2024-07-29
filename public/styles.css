@@ -1056,6 +1056,11 @@ body {
     padding-left: 15rem;
     padding-right: 15rem;
   }
+
+  .\32xl\:py-32 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
 }
 .dark\:rounded-full:where(.dark, .dark *) {
   border-radius: 9999px;
