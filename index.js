@@ -1,4 +1,34 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    const thumbnail = document.getElementById('thumbnail')
+    const popup = document.getElementById('popup')
+
+    if (thumbnail) {
+        if (window.innerWidth <= 768) {
+            thumbnail.addEventListener('click', function () {
+                popup.classList.remove('hidden')
+            })
+        } else {
+            thumbnail.style.pointerEvents = 'none'
+        }
+    }
+
+    if (popup) {
+        popup.addEventListener('click', function () {
+            popup.classList.add('hidden')
+        })
+    }
+
+    window.addEventListener('resize', function () {
+        if (window.innerWidth <= 768) {
+            thumbnail.addEventListener('click', function () {
+                popup.classList.remove('hidden')
+            })
+        } else {
+            thumbnail.style.pointerEvents = 'none'
+        }
+    })
+
     function slowScrollTo(element) {
         const targetPosition = element.offsetTop
         const startPosition = window.scrollY
