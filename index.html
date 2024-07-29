@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Charlotte Moche</title>
-    <link rel="icon" href="favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link href="/public/styles.css" rel="stylesheet">
     <script src="index.js" defer></script>
 </head>
 
-<body id="body" class="dark:bg-gray-900 dark:text-gray-200 relative">
+<body id="body" class="dark:bg-gray-900 dark:text-gray-200 relative h-screen">
     <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-60 z-50 flex items-center justify-center">
         <div class="popup-content bg-brand p-2 rounded-lg shadow-lg m-6 sm:m-8">
             <img src="public/images/self-portrait.jpg" alt="Charlotte Moche" class="rounded-lg shadow-lg" />
@@ -18,12 +18,23 @@
     </div>
     <div class="sticky top-0 z-50 shadow-md border-b bg-gray-800 dark:border-gray-700">
         <nav
-            class="gap-3 flex items-center justify-between h-20 lg:h-24 relative px-4 container mx-auto 2xl:px-44 z-40">
+            class="gap-3 flex items-center justify-between h-20 lg:h-24 relative px-4 container mx-auto 2xl:px-60 z-40">
             <a href="/" id="plover-logo" class="min-w-fit max-w-min">
                 <img src="public/images/logo-dark.png" alt="Logo" class="h-14 lg:h-16 py-1" />
             </a>
             <div class="flex items-center justify-end z-30 shrink-0">
-                <div id="nav-menu-overlay" class="lg:hidden fixed inset-0 top-20 bg-black/50 z-10 hidden">
+                <div id="toggle-theme"
+                    class="flex items-center gap-1.5 group cursor-pointer relative rounded-full border border-gray-500 dark:border-gray-700 bg-gray-800/10">
+                    <a id="#light-mode"
+                        class="w-[27px] p-[4px] rounded-full bg-white/90 stroke-gray-900 dark:stroke-white dark:opacity-60 border border-gray-500 dark:bg-transparent dark:border-none">
+                        <img src="public/images/sun.svg" alt="Light Mode" class="w-6 dark:invert" />
+                    </a>
+                    <a id="#dark-mode"
+                        class="w-[27px] p-[4px] opacity-40 dark:opacity-100 dark:bg-black dark:rounded-full dark:border dark:border-gray-600">
+                        <img src="public/images/moon.svg" alt="Dark Mode" class="w-6 invert" />
+                    </a>
+                </div>
+                <!-- <div id="nav-menu-overlay" class="lg:hidden fixed inset-0 top-20 bg-black/50 z-10 hidden">
                 </div>
                 <div id="mobile-menu-open" class="lg:hidden p-1">
                     <svg class="w-8 h-8 text-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -32,14 +43,14 @@
                     </svg>
                 </div>
                 <div id="mobile-menu-close" class="lg:hidden hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12">
                         </path>
                     </svg>
                 </div>
                 <div id="nav-items"
-                    class="fixed top-20 right-0 sm:right-auto w-4/5 sm:w-1/2 border-t dark:border-gray-700 bg-gray-800 text-white z-50 h-full hidden lg:static lg:block lg:w-auto lg:border-none lg:bg-transparent lg:h-auto">
+                    class="fixed top-20 right-0 sm:right-auto w-4/5 sm:w-1/2 border-t border-gray-700 bg-gray-800 text-white z-50 h-full hidden lg:static lg:block lg:w-auto lg:border-none lg:bg-transparent lg:h-auto">
                     <div
                         class="flex flex-col items-end lg:flex-row lg:items-center pt-4 px-4 sm:px-10 lg:p-0 gap-6 lg:gap-10">
                         <a href="#about" class="nav-link sm:hover:underline font-medium text-base">
@@ -63,20 +74,22 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </nav>
     </div>
-    <div class="md:flex md:gap-20 container px-7 2xl:px-44 py-8">
-        <div class="md:basis-1/3">
-            <section id="about" class="section opacity-0">
-                <div class="flex flex-col gap-6">
+    <div class="lg:flex lg:gap-20 container px-7 2xl:px-60 py-8">
+        <div class="lg:basis-1/2 lg:border-r lg:dark:border-gray-700 lg:pr-20">
+            <!-- <section id="about" class="section opacity-0"> -->
+            <section id="about">
+                <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">about</div>
+                <div class=" flex flex-col gap-6 pt-4">
                     <div>
-                        <div class="flex flex-col items-center gap-6 md:items-start">
+                        <div class="flex flex-col items-center lg:items-start">
                             <img id="thumbnail" src="public/images/self-portrait.jpg" alt="Charlotte Moche"
                                 class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-[6px] border-brand cursor-pointer" />
                             <div
-                                class="flex flex-wrap items-center gap-2 text-sm text-gray-700 dark:text-gray-400 pb-4">
+                                class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pt-4 pb-1">
                                 <div>
                                     javascript
                                 </div>
@@ -92,7 +105,9 @@
                                 <div>
                                     tailwind
                                 </div>
-                                <div class="bg-gray-500 rounded-full w-1 h-1"></div>
+                            </div>
+                            <div
+                                class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pb-4">
                                 <div>
                                     react
                                 </div>
@@ -123,44 +138,48 @@
                     </div>
             </section>
         </div>
-        <div class="basis-2/3 space-y-10 pt-10 md:pt-0">
-            <section id="projects" class="section opacity-0">
-                <div class="flex flex-col gap-6">
-                    <div class="lg:text-xl font-semibold">
-                        <div class="pb-4">
-                            mobile applications
-                        </div>
+        <div class="basis-1/2 flex flex-col gap-20 lg:gap-32 pt-20 lg:pt-0">
+            <!-- <section id="projects" class="section opacity-0"> -->
+            <section id="projects">
+                <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">projects</div>
+                <div class="flex gap-6 justify-between pt-4">
+                    <div class="lg:text-med flex flex-col">
                         <div>
+                            mobile
+                        </div>
+                        <a href="https://preludeapp.co" id="mobile-section" class="pt-4" target="_blank">
                             <img src="public/images/prelude-logo.png" alt="prelude" class="w-20 h-20 rounded-lg" />
-                        </div>
+                        </a>
                     </div>
-                    <div class="lg:text-xl font-semibold">
-                        <div class="pb-4">
-                            static websites
-                        </div>
+                    <div class="lg:text-med flex flex-col">
                         <div>
-                            <img src="public/images/plover.png" alt="plover"
-                                class="w-20 h-20 rounded-lg bg-gray-200 p-2" />
-                        </div>
-                    </div>
-                    <div class="lg:text-xl font-semibold">
-                        <div class="pb-4">
                             production
                         </div>
-                        <div>
+                        <a href="https://peek.com" id="production-section" class="pt-4" target="_blank">
                             <img src="public/images/peek-logo.png" alt="plover" class="w-20 h-20 rounded-lg" />
+                        </a>
+                    </div>
+                    <div class="lg:text-med flex flex-col">
+                        <div>
+                            static
                         </div>
+                        <a href="https://ploverhillcapital.com" id="static-section" class="pt-4" target="_blank">
+                            <img src="public/images/plover.png" alt="plover"
+                                class="w-20 h-20 rounded-lg bg-gray-200 p-2" />
+                        </a>
                     </div>
                 </div>
             </section>
 
-            <section id="contact" class="section opacity-0">
-                <div class="flex gap-4 pb-4">
-                    <a href="https://github.com/charlottemoche">
+            <!-- <section id="contact" class="section opacity-0"> -->
+            <section id="contact">
+                <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">contact</div>
+                <div class="flex gap-4 py-4">
+                    <a href="https://github.com/charlottemoche" target="_blank">
                         <img src="public/images/github-mark.png" alt="GitHub"
                             class="w-8 h-8 dark:invert sm:hover:opacity-50" />
                     </a>
-                    <a href="https://www.linkedin.com/in/charlotte-moche/">
+                    <a href="https://www.linkedin.com/in/charlotte-moche/" target="_blank">
                         <img src="public/images/linkedin-mark.png" alt="LinkedIn"
                             class="w-8 h-8 dark:invert sm:hover:opacity-50" />
                     </a>
@@ -173,8 +192,8 @@
         </div>
     </div>
 
-    <footer class="py-10 lg:py-20 bg-gray-900 text-white border-t dark:border-gray-700 dark:bg-gray-800">
-        <div class="container px-7 2xl:px-44 text-sm">
+    <footer class="py-10 lg:py-28 bg-gray-900 text-white border-t dark:border-gray-700 dark:bg-gray-800">
+        <div class="container px-7 2xl:px-60 text-sm">
             &copy; charlotte moche 2024. all rights reserved.
         </div>
     </footer>
