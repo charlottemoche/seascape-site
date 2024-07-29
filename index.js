@@ -24,6 +24,32 @@ document.addEventListener('DOMContentLoaded', () => {
         requestAnimationFrame(animation)
     }
 
+    const body = document.body
+    const toggle = document.getElementById('toggle-theme')
+
+    const setTheme = (theme) => {
+        body.classList.remove('light', 'dark')
+        body.classList.add(theme)
+        localStorage.setItem('theme', theme)
+    }
+
+    const toggleTheme = () => {
+        const currentTheme = body.classList.contains('light') ? 'light' : 'dark'
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light'
+        setTheme(newTheme)
+    }
+
+    toggle.addEventListener('click', toggleTheme)
+
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme')) {
+        setTheme('dark')
+    }
+
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme) {
+        setTheme(savedTheme)
+    }
+
     const mobileMenuOpen = document.querySelector('#mobile-menu-open')
     const mobileMenuClose = document.querySelector('#mobile-menu-close')
     const navItems = document.querySelector('#nav-items')

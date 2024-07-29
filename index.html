@@ -10,12 +10,13 @@
     <script src="index.js" defer></script>
 </head>
 
-<body>
-    <div class="sticky bg-white top-0 z-50 shadow-md">
+<body id="body" class="dark:bg-gray-900 dark:text-gray-200">
+    <div class="sticky top-0 z-50 shadow-md border-b dark:border-gray-700 dark:bg-gray-800">
         <nav
-            class="gap-3 flex items-center justify-between h-20 lg:h-24 relative px-4 container mx-auto 2xl:px-28 z-40">
+            class="gap-3 flex items-center justify-between h-20 lg:h-24 relative px-4 container mx-auto 2xl:px-44 z-40">
             <a href="/" id="plover-logo" class="min-w-fit max-w-min">
-                <img src="/logo.png" alt="Logo" class="h-14 lg:h-16" />
+                <img src="public/images/logo-light.png" alt="Logo" class="h-14 lg:h-16 dark:hidden py-1" />
+                <img src="public/images/logo-dark.png" alt="Logo" class="h-14 lg:h-16 hidden dark:flex py-1" />
             </a>
             <div class="flex items-center justify-end z-30 shrink-0">
                 <div id="nav-menu-overlay" class="lg:hidden fixed inset-0 top-20 bg-black/50 z-10 hidden">
@@ -25,7 +26,6 @@
                         <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
                     </svg>
-
                 </div>
                 <div id="mobile-menu-close" class="lg:hidden hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24"
@@ -37,45 +37,69 @@
                 <div id="nav-items"
                     class="fixed top-20 right-0 sm:right-auto w-4/5 sm:w-1/2 bg-white border-t z-50 h-full hidden lg:static lg:block lg:w-auto lg:border-none lg:bg-transparent lg:h-auto">
                     <div
-                        class="flex flex-col items-end lg:flex-row lg:items-center pt-4 px-4 sm:px-10 lg:p-0 gap-4 lg:gap-6 text-zinc-900">
+                        class="flex flex-col items-end lg:flex-row lg:items-center pt-4 px-4 sm:px-10 lg:p-0 gap-4 lg:gap-10 text-zinc-900">
                         <a href="#about"
-                            class="nav-link sm:hover:text-zinc-700 sm:hover:underline font-medium text-lg lg:text-base">
-                            About
+                            class="nav-link dark:text-gray-300 sm:hover:underline font-medium text-lg lg:text-base">
+                            about
                         </a>
                         <a href="#projects"
-                            class="nav-link sm:hover:text-zinc-700 sm:hover:underline font-medium text-lg lg:text-base">
-                            Projects
+                            class="nav-link dark:text-gray-300 sm:hover:underline font-medium text-lg lg:text-base">
+                            projects
                         </a>
                         <a href="#contact"
-                            class="nav-link sm:hover:text-zinc-700 sm:hover:underline font-medium text-lg lg:text-base">
-                            Contact
+                            class="nav-link dark:text-gray-300 sm:hover:underline font-medium text-lg lg:text-base">
+                            contact
                         </a>
+                        <div id="toggle-theme"
+                            class="flex items-center gap-1 xl:gap-1.5 group cursor-pointer relative rounded-full border border-gray-500 dark:border-gray-700 bg-gray-800/10">
+                            <a id="#light-mode"
+                                class="flex w-[24px] sm:w-[27px] p-[4px] rounded-full bg-white stroke-gray-900 dark:stroke-white dark:opacity-60 border border-gray-500 dark:bg-transparent dark:border-none">
+                                <img src="public/images/sun.svg" alt="Light Mode" class="w-6 dark:invert" />
+                            </a>
+                            <a id="#dark-mode"
+                                class="flex w-[24px] sm:w-[27px] p-[4px] opacity-40 dark:opacity-100 dark:bg-black dark:rounded-full dark:border dark:border-gray-600">
+                                <img src="public/images/moon.svg" alt="Dark Mode" class="w-6 dark:invert" />
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </nav>
     </div>
     <section id="about" class="section opacity-0">
-        <div class="container px-7 2xl:px-28 pt-10">
-            About
+        <div class="container px-7 2xl:px-44 py-10">
+            <div class="flex">
+                <div class="lg:basis-1/2">
+                    as an artist and software engineer, I enjoy problem solving and content creation. I am excited by
+                    both the visual and technical aspects of front end and back end development. having studied both
+                    fine arts and coding, I am able to combine the two skill sets to build functional and aesthetically
+                    pleasing applications.
+                </div>
+                <div class="lg:basis-1/2"></div>
+            </div>
         </div>
     </section>
 
     <section id="projects" class="section opacity-0">
-        <div class="container px-7 2xl:px-28 pt-10">
-            Projects
+        <div class="container px-7 2xl:px-44 py-10">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div>mobile applications</div>
+                <div>static websites</div>
+                <div>production</div>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="section opacity-0">
-        <div class="container px-7 2xl:px-28 pt-10">
-            Contact
+        <div class="container px-7 2xl:px-44 py-10">
+            if you are interested in a collaboration, a website, or an application, please contact me at <a
+                class="hover:underline" href="mailto:charlottebmoche@gmail.com">charlottebmoche@gmail.com.</a>
         </div>
     </section>
 
-    <footer class="bg-black text-white py-10 lg:py-20">
-        <div class="container px-7 2xl:px-32">
-
+    <footer class="py-10 lg:py-20 bg-gray-900 text-white border-t dark:border-gray-700 dark:bg-gray-800">
+        <div class="container px-7 2xl:px-44">
+            &copy; charlotte moche 2024. all rights reserved.
         </div>
     </footer>
 </body>
