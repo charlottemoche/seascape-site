@@ -1,31 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const thumbnail = document.getElementById('thumbnail')
-    const popup = document.getElementById('popup')
+    const thumbnail = document.getElementById('thumbnail');
+    const popup = document.getElementById('popup');
 
-    if (thumbnail) {
-        if (window.innerWidth <= 768) {
-            thumbnail.addEventListener('click', function () {
-                popup.classList.remove('hidden')
-            })
-        } else {
-            thumbnail.style.pointerEvents = 'none'
-        }
+    function showPopup() {
+        popup.classList.remove('hidden')
+        setTimeout(() => {
+            popup.classList.remove('opacity-0')
+            popup.classList.add('opacity-100')
+        }, 50)
     }
 
-    if (popup) {
-        popup.addEventListener('click', function () {
+    function hidePopup() {
+        popup.classList.remove('opacity-100')
+        popup.classList.add('opacity-0')
+        setTimeout(() => {
             popup.classList.add('hidden')
-        })
+        }, 300)
     }
 
-    window.addEventListener('resize', function () {
+    // Show popup on click for mobile
+    thumbnail.addEventListener('click', function (event) {
+        event.preventDefault()
         if (window.innerWidth <= 768) {
-            thumbnail.addEventListener('click', function () {
-                popup.classList.remove('hidden')
-            })
-        } else {
-            thumbnail.style.pointerEvents = 'none'
+            showPopup()
+        }
+    })
+
+    // Hide popup on click outside
+    popup.addEventListener('click', function (event) {
+        if (event.target === popup) {
+            hidePopup()
         }
     })
 
