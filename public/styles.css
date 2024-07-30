@@ -536,9 +536,6 @@ video {
     max-width: 1536px;
   }
 }
-.static {
-  position: static;
-}
 .fixed {
   position: fixed;
 }
@@ -692,8 +689,8 @@ video {
 .border {
   border-width: 1px;
 }
-.border-\[6px\] {
-  border-width: 6px;
+.border-\[4px\] {
+  border-width: 4px;
 }
 .border-b {
   border-bottom-width: 1px;
@@ -746,8 +743,8 @@ video {
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
 }
-.bg-opacity-60 {
-  --tw-bg-opacity: 0.6;
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
 }
 .stroke-gray-900 {
   stroke: #212529;
