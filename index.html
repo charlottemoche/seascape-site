@@ -78,7 +78,7 @@
             </div>
         </nav>
     </div>
-    <div class="lg:flex lg:gap-20 container px-7 2xl:px-60 py-8">
+    <div class="lg:flex lg:gap-20 container px-7 2xl:px-60 py-8 lg:py-32">
         <div class="lg:basis-1/2 lg:border-r lg:dark:border-gray-700 lg:pr-20">
             <!-- <section id="about" class="section opacity-0"> -->
             <section id="about">
@@ -144,28 +144,27 @@
                 <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">projects</div>
                 <div class="flex gap-6 justify-between pt-4">
                     <div class="lg:text-med flex flex-col">
-                        <div>
-                            mobile
-                        </div>
-                        <a href="https://preludeapp.co" id="mobile-section" class="pt-4" target="_blank">
-                            <img src="public/images/prelude-logo.png" alt="prelude" class="w-20 h-20 rounded-lg" />
+                        <div class="pb-4">mobile</div>
+                        <a href="https://preludeapp.co" id="mobile-section"
+                            class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
+                            <img src="public/images/prelude-logo.png" alt="prelude"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
                         </a>
                     </div>
                     <div class="lg:text-med flex flex-col">
-                        <div>
-                            production
-                        </div>
-                        <a href="https://peek.com" id="production-section" class="pt-4" target="_blank">
-                            <img src="public/images/peek-logo.png" alt="plover" class="w-20 h-20 rounded-lg" />
+                        <div class="pb-4">production</div>
+                        <a href="https://peek.com" id="production-section"
+                            class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
+                            <img src="public/images/peek-logo.png" alt="peek"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
                         </a>
                     </div>
                     <div class="lg:text-med flex flex-col">
-                        <div>
-                            client
-                        </div>
-                        <a href="https://ploverhillcapital.com" id="client-section" class="pt-4" target="_blank">
+                        <div class="pb-4">client</div>
+                        <a href="https://ploverhillcapital.com" id="client-section"
+                            class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
                             <img src="public/images/plover.png" alt="plover"
-                                class="w-20 h-20 rounded-lg bg-gray-200 p-2" />
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110 bg-gray-200" />
                         </a>
                     </div>
                 </div>
