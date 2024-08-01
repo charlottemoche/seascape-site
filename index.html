@@ -12,9 +12,19 @@
 
 <body id="body" class="dark:bg-gray-900 dark:text-gray-200 relative">
     <div id="popup"
-        class="hidden fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out opacity-0">
-        <div class="popup-content bg-brand p-1 shadow-lg m-6 sm:m-8 rounded-full">
+        class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out opacity-0">
+        <div class="popup-content bg-brand p-1 shadow-lg m-6 sm:m-8 rounded-full max-w-[400px]">
             <img src="public/images/self-portrait.jpg" alt="Charlotte Moche" class="rounded-full shadow-lg" />
+        </div>
+    </div>
+    <div id="video-popup"
+        class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out opacity-0">
+        <div class="popup-content shadow-lg m-6 sm:m-8 rounded-full">
+            <video id="video"
+                class="object-cover rounded-[2rem] z-20 max-w-[80vw] max-h-[80vh] md:max-w-[80vw] md:max-h-[80vh]"
+                autoplay loop muted>
+                <source src="public/videos/prelude.mp4" type="video/mp4" />
+            </video>
         </div>
     </div>
     <div class="sticky top-0 z-40 shadow-md border-b bg-gray-800 dark:border-gray-700">
@@ -79,7 +89,7 @@
             </div>
         </nav>
     </div>
-    <div class="lg:flex lg:gap-20 container px-7 2xl:px-60 py-8 lg:py-32">
+    <div class="lg:flex lg:gap-20 container px-7 2xl:px-60 py-8 lg:py-20">
         <div class="lg:basis-1/2 lg:border-r lg:dark:border-gray-700 lg:pr-20">
             <!-- <section id="about" class="section opacity-0"> -->
             <section id="about">
@@ -88,7 +98,7 @@
                     <div>
                         <div class="flex flex-col items-center lg:items-start">
                             <img id="thumbnail" src="public/images/self-portrait.jpg" alt="Charlotte Moche"
-                                class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-[4px] border-brand" />
+                                class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-[4px] border-brand cursor-pointer" />
                             <div
                                 class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pt-4 pb-1">
                                 <div>
@@ -146,23 +156,27 @@
                 <div class="flex gap-6 justify-between pt-4">
                     <div class="lg:text-med flex flex-col">
                         <div class="pb-4">mobile</div>
-                        <a href="https://preludeapp.co" id="mobile-section"
+                        <div id="prelude-icon" class="overflow-hidden rounded-lg w-20 h-20 relative cursor-pointer">
+                            <img src="public/images/prelude-logo.png" alt="prelude"
+                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
+                        </div>
+                        <!-- <a href="https://preludeapp.co" id="prelude-icon"
                             class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
                             <img src="public/images/prelude-logo.png" alt="prelude"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
-                        </a>
+                        </a> -->
                     </div>
                     <div class="lg:text-med flex flex-col">
                         <div class="pb-4">production</div>
-                        <a href="https://peek.com" id="production-section"
-                            class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
+                        <a href="https://peek.com" id="peek-icon" class="overflow-hidden rounded-lg w-20 h-20 relative"
+                            target="_blank">
                             <img src="public/images/peek-logo.png" alt="peek"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
                         </a>
                     </div>
                     <div class="lg:text-med flex flex-col">
                         <div class="pb-4">client</div>
-                        <a href="https://ploverhillcapital.com" id="client-section"
+                        <a href="https://ploverhillcapital.com" id="plover-hill-icon"
                             class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
                             <img src="public/images/plover.png" alt="plover"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110 bg-gray-200" />

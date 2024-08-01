@@ -1,38 +1,39 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
+    function setupPopup(thumbnailId, popupId) {
+        const thumbnail = document.getElementById(thumbnailId)
+        const popup = document.getElementById(popupId)
 
-    const thumbnail = document.getElementById('thumbnail');
-    const popup = document.getElementById('popup');
+        function showPopup() {
+            popup.classList.remove('hidden')
+            setTimeout(() => {
+                popup.classList.remove('opacity-0')
+                popup.classList.add('opacity-100')
+            }, 50)
+        }
 
-    function showPopup() {
-        popup.classList.remove('hidden')
-        setTimeout(() => {
-            popup.classList.remove('opacity-0')
-            popup.classList.add('opacity-100')
-        }, 50)
-    }
+        function hidePopup() {
+            popup.classList.remove('opacity-100')
+            popup.classList.add('opacity-0')
+            setTimeout(() => {
+                popup.classList.add('hidden')
+            }, 300)
+        }
 
-    function hidePopup() {
-        popup.classList.remove('opacity-100')
-        popup.classList.add('opacity-0')
-        setTimeout(() => {
-            popup.classList.add('hidden')
-        }, 300)
-    }
-
-    // Show popup on click for mobile
-    thumbnail.addEventListener('click', function (event) {
-        event.preventDefault()
-        if (window.innerWidth <= 768) {
+        // Show popup on click for mobile
+        thumbnail.addEventListener('click', function (event) {
             showPopup()
-        }
-    })
+        })
 
-    // Hide popup on click outside
-    popup.addEventListener('click', function (event) {
-        if (event.target === popup) {
-            hidePopup()
-        }
-    })
+        // Hide popup on click outside
+        popup.addEventListener('click', function (event) {
+            if (event.target === popup) {
+                hidePopup()
+            }
+        })
+    }
+
+    setupPopup('thumbnail', 'popup');
+    setupPopup('prelude-icon', 'video-popup');
 
     // function slowScrollTo(element) {
     //     const targetPosition = element.offsetTop
