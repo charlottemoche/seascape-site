@@ -767,6 +767,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(33 37 41 / var(--tw-bg-opacity));
 }
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
 .bg-white\/90 {
   background-color: rgb(255 255 255 / 0.9);
 }
@@ -1072,14 +1076,14 @@ body {
     padding: 0px;
   }
 
+  .lg\:py-14 {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
   .lg\:py-20 {
     padding-top: 5rem;
     padding-bottom: 5rem;
-  }
-
-  .lg\:py-28 {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
   }
 
   .lg\:pr-20 {
@@ -1113,11 +1117,6 @@ body {
   .\32xl\:px-60 {
     padding-left: 15rem;
     padding-right: 15rem;
-  }
-
-  .\32xl\:py-32 {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
   }
 }
 .dark\:rounded-full:where(.dark, .dark *) {

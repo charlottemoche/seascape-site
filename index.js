@@ -19,21 +19,25 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 300)
         }
 
-        // Show popup on click for mobile
-        thumbnail.addEventListener('click', function (event) {
-            showPopup()
-        })
+        if (thumbnail) {
+            thumbnail.addEventListener('click', function (event) {
+                if (window.innerWidth < 768) {
+                    showPopup()
+                }
+            })
+        }
 
-        // Hide popup on click outside
-        popup.addEventListener('click', function (event) {
-            if (event.target === popup) {
-                hidePopup()
-            }
-        })
+        if (popup) {
+            popup.addEventListener('click', function (event) {
+                if (event.target === popup) {
+                    hidePopup()
+                }
+            })
+        }
     }
 
-    setupPopup('thumbnail', 'popup');
-    setupPopup('prelude-icon', 'video-popup');
+    setupPopup('thumbnail', 'popup')
+    setupPopup('prelude-icon', 'video-popup')
 
     // function slowScrollTo(element) {
     //     const targetPosition = element.offsetTop

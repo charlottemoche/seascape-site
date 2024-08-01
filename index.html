@@ -10,7 +10,7 @@
     <script src="index.js" defer></script>
 </head>
 
-<body id="body" class="dark:bg-gray-900 dark:text-gray-200 relative">
+<body id="body" class="bg-gray-900 dark:text-gray-200 relative">
     <div id="popup"
         class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out opacity-0">
         <div class="popup-content bg-brand p-1 shadow-lg m-6 sm:m-8 rounded-full max-w-[400px]">
@@ -89,124 +89,128 @@
             </div>
         </nav>
     </div>
-    <div class="lg:flex lg:gap-20 container px-7 2xl:px-60 py-8 lg:py-20">
-        <div class="lg:basis-1/2 lg:border-r lg:dark:border-gray-700 lg:pr-20">
-            <!-- <section id="about" class="section opacity-0"> -->
-            <section id="about">
-                <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">about</div>
-                <div class=" flex flex-col gap-6 pt-4">
-                    <div>
-                        <div class="flex flex-col items-center lg:items-start">
-                            <img id="thumbnail" src="public/images/self-portrait.jpg" alt="Charlotte Moche"
-                                class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-[4px] border-brand cursor-pointer" />
-                            <div
-                                class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pt-4 pb-1">
-                                <div>
-                                    javascript
+    <div class="bg-white dark:bg-gray-900">
+        <div class="lg:flex lg:gap-20 container px-7 2xl:px-60 py-8 lg:py-14">
+            <div class="lg:basis-1/2 lg:border-r lg:dark:border-gray-700 lg:pr-20">
+                <!-- <section id="about" class="section opacity-0"> -->
+                <section id="about">
+                    <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">about</div>
+                    <div class=" flex flex-col gap-6 pt-4">
+                        <div>
+                            <div class="flex flex-col items-center lg:items-start">
+                                <img id="thumbnail" src="public/images/self-portrait.jpg" alt="Charlotte Moche"
+                                    class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-[4px] border-brand cursor-pointer" />
+                                <div
+                                    class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pt-4 pb-1">
+                                    <div>
+                                        javascript
+                                    </div>
+                                    <div class="bg-gray-500 rounded-full w-1 h-1"></div>
+                                    <div>
+                                        html
+                                    </div>
+                                    <div class="bg-gray-500 rounded-full w-1 h-1"></div>
+                                    <div>
+                                        css
+                                    </div>
+                                    <div class="bg-gray-500 rounded-full w-1 h-1"></div>
+                                    <div>
+                                        tailwind
+                                    </div>
                                 </div>
-                                <div class="bg-gray-500 rounded-full w-1 h-1"></div>
-                                <div>
-                                    html
-                                </div>
-                                <div class="bg-gray-500 rounded-full w-1 h-1"></div>
-                                <div>
-                                    css
-                                </div>
-                                <div class="bg-gray-500 rounded-full w-1 h-1"></div>
-                                <div>
-                                    tailwind
+                                <div
+                                    class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pb-4">
+                                    <div>
+                                        react
+                                    </div>
+                                    <div class="bg-gray-500 rounded-full w-1 h-1"></div>
+                                    <div>
+                                        phoenix
+                                    </div>
+                                    <div class="bg-gray-500 rounded-full w-1 h-1"></div>
+                                    <div>
+                                        elixir
+                                    </div>
+                                    <div class="bg-gray-500 rounded-full w-1 h-1"></div>
+                                    <div>
+                                        swift
+                                    </div>
                                 </div>
                             </div>
-                            <div
-                                class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pb-4">
-                                <div>
-                                    react
-                                </div>
-                                <div class="bg-gray-500 rounded-full w-1 h-1"></div>
-                                <div>
-                                    phoenix
-                                </div>
-                                <div class="bg-gray-500 rounded-full w-1 h-1"></div>
-                                <div>
-                                    elixir
-                                </div>
-                                <div class="bg-gray-500 rounded-full w-1 h-1"></div>
-                                <div>
-                                    swift
-                                </div>
+                            <div class="text-sm lg:text-base border-t dark:border-gray-700 pt-4">
+                                as an artist and software engineer, I enjoy problem solving and content creation. I am
+                                excited
+                                by
+                                both the visual and technical aspects of front end and back end development. having
+                                studied
+                                both
+                                fine arts and coding, I am able to combine the two skill sets to build functional and
+                                aesthetically
+                                pleasing applications.
                             </div>
                         </div>
-                        <div class="text-sm lg:text-base border-t dark:border-gray-700 pt-4">
-                            as an artist and software engineer, I enjoy problem solving and content creation. I am
-                            excited
-                            by
-                            both the visual and technical aspects of front end and back end development. having studied
-                            both
-                            fine arts and coding, I am able to combine the two skill sets to build functional and
-                            aesthetically
-                            pleasing applications.
-                        </div>
-                    </div>
-            </section>
-        </div>
-        <div class="basis-1/2 flex flex-col gap-20 lg:gap-32 pt-20 lg:pt-0">
-            <!-- <section id="projects" class="section opacity-0"> -->
-            <section id="projects">
-                <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">projects</div>
-                <div class="flex gap-6 justify-between pt-4">
-                    <div class="lg:text-med flex flex-col">
-                        <div class="pb-4">mobile</div>
-                        <div id="prelude-icon" class="overflow-hidden rounded-lg w-20 h-20 relative cursor-pointer">
+                </section>
+            </div>
+            <div class="basis-1/2 flex flex-col gap-20 lg:gap-32 pt-20 lg:pt-0">
+                <!-- <section id="projects" class="section opacity-0"> -->
+                <section id="projects">
+                    <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">projects</div>
+                    <div class="flex gap-6 justify-between pt-4">
+                        <div class="lg:text-med flex flex-col">
+                            <div class="pb-4">mobile</div>
+                            <!-- <div id="prelude-icon" class="overflow-hidden rounded-lg w-20 h-20 relative cursor-pointer">
                             <img src="public/images/prelude-logo.png" alt="prelude"
                                 class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
+                        </div> -->
+                            <a href="https://preludeapp.co" id="prelude-icon-link"
+                                class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
+                                <img src="public/images/prelude-logo.png" alt="prelude"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
+                            </a>
                         </div>
-                        <!-- <a href="https://preludeapp.co" id="prelude-icon"
-                            class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
-                            <img src="public/images/prelude-logo.png" alt="prelude"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
-                        </a> -->
+                        <div class="lg:text-med flex flex-col">
+                            <div class="pb-4">production</div>
+                            <a href="https://peek.com" id="peek-icon"
+                                class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
+                                <img src="public/images/peek-logo.png" alt="peek"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
+                            </a>
+                        </div>
+                        <div class="lg:text-med flex flex-col">
+                            <div class="pb-4">client</div>
+                            <a href="https://ploverhillcapital.com" id="plover-hill-icon"
+                                class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
+                                <img src="public/images/plover.png" alt="plover"
+                                    class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110 bg-gray-200" />
+                            </a>
+                        </div>
                     </div>
-                    <div class="lg:text-med flex flex-col">
-                        <div class="pb-4">production</div>
-                        <a href="https://peek.com" id="peek-icon" class="overflow-hidden rounded-lg w-20 h-20 relative"
-                            target="_blank">
-                            <img src="public/images/peek-logo.png" alt="peek"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
-                        </a>
-                    </div>
-                    <div class="lg:text-med flex flex-col">
-                        <div class="pb-4">client</div>
-                        <a href="https://ploverhillcapital.com" id="plover-hill-icon"
-                            class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
-                            <img src="public/images/plover.png" alt="plover"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110 bg-gray-200" />
-                        </a>
-                    </div>
-                </div>
-            </section>
+                </section>
 
-            <!-- <section id="contact" class="section opacity-0"> -->
-            <section id="contact">
-                <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">contact</div>
-                <div class="flex gap-4 py-4">
-                    <a href="https://github.com/charlottemoche" target="_blank">
-                        <img src="public/images/github-mark.png" alt="GitHub"
-                            class="w-8 h-8 dark:invert sm:hover:opacity-50" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/charlotte-moche/" target="_blank">
-                        <img src="public/images/linkedin-mark.png" alt="LinkedIn"
-                            class="w-8 h-8 dark:invert sm:hover:opacity-50" />
-                    </a>
-                </div>
-                <div class="text-sm lg:text-base">
-                    if you are interested in a collaboration, a website, or an application, please contact me at <a
-                        class="hover:underline" href="mailto:charlottebmoche@gmail.com">charlottebmoche@gmail.com.</a>
-                </div>
-            </section>
+                <!-- <section id="contact" class="section opacity-0"> -->
+                <section id="contact">
+                    <div class="text-lg lg:text-2xl border-b dark:border-gray-700 pb-2">contact</div>
+                    <div class="flex gap-4 py-4">
+                        <a href="https://github.com/charlottemoche" target="_blank">
+                            <img src="public/images/github-mark.png" alt="GitHub"
+                                class="w-8 h-8 dark:invert sm:hover:opacity-50" />
+                        </a>
+                        <a href="https://www.linkedin.com/in/charlotte-moche/" target="_blank">
+                            <img src="public/images/linkedin-mark.png" alt="LinkedIn"
+                                class="w-8 h-8 dark:invert sm:hover:opacity-50" />
+                        </a>
+                    </div>
+                    <div class="text-sm lg:text-base">
+                        if you are interested in a collaboration, a website, or an application, please contact me at <a
+                            class="hover:underline"
+                            href="mailto:charlottebmoche@gmail.com">charlottebmoche@gmail.com.</a>
+                    </div>
+                </section>
+            </div>
         </div>
     </div>
 
-    <footer class="py-10 lg:py-28 2xl:py-32 bg-gray-900 text-white border-t dark:border-gray-700 dark:bg-gray-800">
+    <footer class="py-10 lg:py-20 bg-gray-900 text-white border-t dark:border-gray-700 dark:bg-gray-800">
         <div class="container px-7 2xl:px-60 text-sm">
             &copy; charlotte moche 2024. all rights reserved.
         </div>
