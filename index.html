@@ -17,16 +17,6 @@
             <img src="public/images/self-portrait.jpg" alt="Charlotte Moche" class="rounded-full shadow-lg" />
         </div>
     </div>
-    <div id="video-popup"
-        class="hidden fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center transition-opacity duration-300 ease-in-out opacity-0">
-        <div class="popup-content shadow-lg m-6 sm:m-8 rounded-full">
-            <video id="video"
-                class="object-cover rounded-[2rem] z-20 max-w-[80vw] max-h-[80vh] md:max-w-[80vw] md:max-h-[80vh]"
-                autoplay loop muted>
-                <source src="public/videos/prelude.mp4" type="video/mp4" />
-            </video>
-        </div>
-    </div>
     <div class="sticky top-0 z-40 shadow-md border-b bg-gray-800 dark:border-gray-700">
         <nav
             class="gap-3 flex items-center justify-between h-20 lg:h-24 relative px-4 container mx-auto 2xl:px-60 z-40">
@@ -36,56 +26,15 @@
             <div class="flex items-center justify-end z-30 shrink-0">
                 <div id="toggle-theme"
                     class="flex items-center gap-1.5 group cursor-pointer relative rounded-full border border-gray-500 dark:border-gray-700 bg-gray-800/10">
-                    <a id="#light-mode"
+                    <a
                         class="w-[27px] p-[4px] rounded-full bg-white/90 stroke-gray-900 dark:stroke-white dark:opacity-60 border border-gray-500 dark:bg-transparent dark:border-none">
                         <img src="public/images/sun.svg" alt="Light Mode" class="w-6 dark:invert" />
                     </a>
-                    <a id="#dark-mode"
+                    <a
                         class="w-[27px] p-[4px] opacity-40 dark:opacity-100 dark:bg-black dark:rounded-full dark:border dark:border-gray-600">
                         <img src="public/images/moon.svg" alt="Dark Mode" class="w-6 invert" />
                     </a>
                 </div>
-                <!-- <div id="nav-menu-overlay" class="lg:hidden fixed inset-0 top-20 bg-black/50 z-10 hidden">
-                </div>
-                <div id="mobile-menu-open" class="lg:hidden p-1">
-                    <svg class="w-8 h-8 text-brand" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 6H20M4 12H20M4 18H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </div>
-                <div id="mobile-menu-close" class="lg:hidden hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-brand" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M6 18L18 6M6 6l12 12">
-                        </path>
-                    </svg>
-                </div>
-                <div id="nav-items"
-                    class="fixed top-20 right-0 sm:right-auto w-4/5 sm:w-1/2 border-t border-gray-700 bg-gray-800 text-white z-50 h-full hidden lg:static lg:block lg:w-auto lg:border-none lg:bg-transparent lg:h-auto">
-                    <div
-                        class="flex flex-col items-end lg:flex-row lg:items-center pt-4 px-4 sm:px-10 lg:p-0 gap-6 lg:gap-10">
-                        <a href="#about" class="nav-link sm:hover:underline font-medium text-base">
-                            about
-                        </a>
-                        <a href="#projects" class="nav-link sm:hover:underline font-medium text-base">
-                            projects
-                        </a>
-                        <a href="#contact" class="nav-link sm:hover:underline font-medium text-base">
-                            contact
-                        </a>
-                        <div id="toggle-theme"
-                            class="flex items-center gap-1 xl:gap-1.5 group cursor-pointer relative rounded-full border border-gray-500 dark:border-gray-700 bg-gray-800/10">
-                            <a id="#light-mode"
-                                class="flex w-[24px] sm:w-[27px] p-[4px] rounded-full bg-white/90 stroke-gray-900 dark:stroke-white dark:opacity-60 border border-gray-500 dark:bg-transparent dark:border-none">
-                                <img src="public/images/sun.svg" alt="Light Mode" class="w-6 dark:invert" />
-                            </a>
-                            <a id="#dark-mode"
-                                class="flex w-[24px] sm:w-[27px] p-[4px] opacity-40 dark:opacity-100 dark:bg-black dark:rounded-full dark:border dark:border-gray-600">
-                                <img src="public/images/moon.svg" alt="Dark Mode" class="w-6 invert" />
-                            </a>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </nav>
     </div>
@@ -99,7 +48,7 @@
                         <div>
                             <div class="flex flex-col items-center lg:items-start">
                                 <img id="thumbnail" src="public/images/self-portrait.jpg" alt="Charlotte Moche"
-                                    class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-[4px] border-brand cursor-pointer" />
+                                    class="w-32 h-32 sm:w-48 sm:h-48 rounded-full border-[4px] border-brand cursor-pointer sm:cursor-default" />
                                 <div
                                     class="flex items-center justify-center gap-2 text-sm text-gray-700 dark:text-gray-400 pt-4 pb-1">
                                     <div>
@@ -158,10 +107,6 @@
                     <div class="flex gap-6 justify-between pt-4">
                         <div class="lg:text-med flex flex-col">
                             <div class="pb-4">mobile</div>
-                            <!-- <div id="prelude-icon" class="overflow-hidden rounded-lg w-20 h-20 relative cursor-pointer">
-                            <img src="public/images/prelude-logo.png" alt="prelude"
-                                class="absolute inset-0 w-full h-full object-cover transition-transform duration-300 transform hover:scale-110" />
-                        </div> -->
                             <a href="https://preludeapp.co" id="prelude-icon-link"
                                 class="overflow-hidden rounded-lg w-20 h-20 relative" target="_blank">
                                 <img src="public/images/prelude-logo.png" alt="prelude"
