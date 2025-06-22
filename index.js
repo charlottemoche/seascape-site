@@ -1,38 +1,66 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const body = document.body
-    const toggle = document.getElementById('toggle-theme')
+document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('[data-tab-target]');
+    const contents = document.querySelectorAll('[data-tab-content]');
 
-    const setTheme = (theme) => {
-        body.classList.remove('light', 'dark')
-        body.classList.add(theme)
-        localStorage.setItem('theme', theme)
-
-        const logoDark = document.getElementById('logo-dark')
-        const logoLight = document.getElementById('logo-light')
-
-        if (theme === 'dark') {
-            logoDark.classList.remove('hidden')
-            logoLight.classList.add('hidden')
-        } else {
-            logoDark.classList.add('hidden')
-            logoLight.classList.remove('hidden')
-        }
+    function deactivateAllTabs() {
+        tabs.forEach(tab => {
+            tab.classList.remove('border-b-2', 'border-blue-600', 'text-blue-600', 'font-semibold');
+        });
+        contents.forEach(content => content.classList.add('hidden'));
     }
 
-    const toggleTheme = () => {
-        const currentTheme = body.classList.contains('light') ? 'light' : 'dark'
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light'
-        setTheme(newTheme)
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            deactivateAllTabs();
+            tab.classList.add('border-b-2', 'border-blue-600', 'text-blue-600', 'font-semibold');
+            const targetId = tab.dataset.tabTarget;
+            document.getElementById(targetId).classList.remove('hidden');
+        });
+    });
+
+    // Activate first tab by default
+    if (tabs.length) {
+        tabs[0].click();
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Mobile menu toggle
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    // Tab functionality for all buttons (desktop + mobile)
+    const tabs = document.querySelectorAll('button[data-tab-target]');
+    const contents = document.querySelectorAll('[data-tab-content]');
+
+    function deactivateAllTabs() {
+        tabs.forEach(tab => {
+            tab.classList.remove('border-b-2', 'border-blue-600', 'text-blue-600', 'font-semibold');
+        });
+        contents.forEach(content => content.classList.add('hidden'));
     }
 
-    toggle.addEventListener('click', toggleTheme)
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            deactivateAllTabs();
+            tab.classList.add('border-b-2', 'border-blue-600', 'text-blue-600', 'font-semibold');
 
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches && !localStorage.getItem('theme')) {
-        setTheme('dark')
-    }
+            const targetId = tab.dataset.tabTarget;
+            document.getElementById(targetId).classList.remove('hidden');
 
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme) {
-        setTheme(savedTheme)
+            // If mobile menu is open, close it after selecting
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    });
+
+    // Activate first tab by default
+    if (tabs.length) {
+        tabs[0].click();
     }
-})
+});
