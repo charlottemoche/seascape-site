@@ -586,6 +586,9 @@ video {
 .w-full {
   width: 100%;
 }
+.max-w-3xl {
+  max-width: 48rem;
+}
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -760,6 +763,12 @@ body {
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+@media (min-width: 768px) {
+
+  .md\:text-lg {
+    font-size: 1.25rem;
+  }
 }
 @media (min-width: 1024px) {
 
