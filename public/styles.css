@@ -559,6 +559,9 @@ video {
 .mb-4 {
   margin-bottom: 1rem;
 }
+.inline-block {
+  display: inline-block;
+}
 .flex {
   display: flex;
 }
@@ -582,6 +585,10 @@ video {
 }
 .w-auto {
   width: auto;
+}
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .w-full {
   width: 100%;
